@@ -1,9 +1,26 @@
-const AddManager = () => {
+import React, { useState } from "react";
+
+const AddPharmacist = () => {
+  const [showPassword, setShowPassword] = useState(false);
+
+  function handlePasswordClick() {
+    setShowPassword(!showPassword);
+    var input = document.getElementById("pwdinput");
+    if (input.type === "password") {
+      input.type = "text";
+    } else {
+      input.type = "password";
+    }
+    input.focus();
+  }
+
   return (
-    <div className="manager">
-      <div className="updateManager">
+    <div className="pharmacist">
+      <div className="addPharmacist">
         <div className="main__form">
-          <div className="main__form--title text-center">Update Manager</div>
+          <div className="main__form--title text-center">
+            Add New Pharmacist
+          </div>
           <form action="#" method="POST">
             <div className="form-row">
               <div className="col col-12">
@@ -13,7 +30,6 @@ const AddManager = () => {
                     type="text"
                     name="fname"
                     placeholder="First name"
-                    defaultValue="MD Arif"
                     required=""
                   />
                 </label>
@@ -25,7 +41,6 @@ const AddManager = () => {
                     type="text"
                     name="lname"
                     placeholder="Last Name"
-                    defaultValue="Islam"
                     required=""
                   />
                 </label>
@@ -37,7 +52,6 @@ const AddManager = () => {
                     type="email"
                     name="email"
                     placeholder="Email"
-                    defaultValue="arifislamarif344@gmail.com"
                     required=""
                   />
                 </label>
@@ -49,15 +63,30 @@ const AddManager = () => {
                     type="number"
                     name="phone"
                     placeholder="Phone"
-                    defaultValue={"01704307597"}
                     required=""
                   />
                 </label>
               </div>
-              <input type="hidden" name="action" defaultValue="updateManager" />
-              <input type="hidden" name="id" defaultValue={1} />
               <div className="col col-12">
-                <input type="submit" defaultValue="Update" />
+                <label className="input">
+                  <i id="left" className="fas fa-key" />
+                  <input
+                    id="pwdinput"
+                    type="password"
+                    name="password"
+                    placeholder="Password"
+                    required=""
+                  />
+                  <i
+                    id="pwd"
+                    onClick={handlePasswordClick}
+                    className="fas fa-eye right"
+                  />
+                </label>
+              </div>
+              <input type="hidden" name="action" defaultValue="addPharmacist" />
+              <div className="col col-12">
+                <input type="submit" defaultValue="Submit" />
               </div>
             </div>
           </form>
@@ -67,4 +96,4 @@ const AddManager = () => {
   );
 };
 
-export default AddManager;
+export default AddPharmacist;

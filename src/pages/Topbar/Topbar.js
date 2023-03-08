@@ -28,13 +28,13 @@ const Topbar = () => {
             MD Arif Islam
           </button>
           <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
-            <Link className="dropdown-item" to="#">
+            <Link className="dropdown-item" to="/">
               Dashboard
             </Link>
-            <Link className="dropdown-item" to="#">
+            <Link className="dropdown-item" to="/profile">
               Profile
             </Link>
-            <Link className="dropdown-item" to="#">
+            <Link className="dropdown-item" to="/login">
               Log Out
             </Link>
           </div>

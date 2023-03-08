@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const Sidebar = () => {
   return (
@@ -7,55 +7,55 @@ const Sidebar = () => {
       <ul className="sideber__ber">
         <h2 className="sideber__panel">Pharmacy Management System</h2>
         <li id="left" className="sideber__item active">
-          <Link to="#dashboard">
+          <NavLink to="/">
             <i id="left" className="fas fa-tachometer-alt" />
             Dashboard
-          </Link>
+          </NavLink>
         </li>
         {/* Only For Admin */}
         <li id="left" className="sideber__item sideber__item--modify active">
-          <Link to="#addManager">
+          <NavLink to="/managers/add">
             <i id="left" className="fas fa-user-plus" />
             Add Manager
-          </Link>
+          </NavLink>
         </li>
         <li id="left" className="sideber__item">
-          <Link to="#allManager">
+          <NavLink to="/managers">
             <i id="left" className="fas fa-user" />
             All Manager
-          </Link>
+          </NavLink>
         </li>
         {/* For Admin, Manager */}
         <li id="left" className="sideber__item sideber__item--modify">
-          <Link to="#addPharmacist">
+          <NavLink to="/pharmacists/add">
             <i id="left" className="fas fa-user-plus" />
             Add Pharmacist
-          </Link>
+          </NavLink>
         </li>
         <li id="left" className="sideber__item">
-          <Link to="#allPharmacist">
+          <NavLink to="/pharmacists">
             <i id="left" className="fas fa-user" />
             All Pharmacist
-          </Link>
+          </NavLink>
         </li>
         {/* For Admin, Manager, Pharmacist*/}
         <li id="left" className="sideber__item sideber__item--modify">
-          <Link to="#addSalesman">
+          <NavLink to="/salesmen/add">
             <i id="left" className="fas fa-user-plus" />
             Add Salesman
-          </Link>
+          </NavLink>
         </li>
         <li id="left" className="sideber__item">
-          <Link to="#allSalesman">
+          <NavLink to="/salesmen">
             <i id="left" className="fas fa-user" />
             All Salesman
-          </Link>
+          </NavLink>
         </li>
       </ul>
       <footer className="text-center">
         <span>MD Arif Islam</span>
         <br />
-        ©2020 PMS All right reserved.
+        ©2023 PMS All right reserved.
       </footer>
     </div>
   );

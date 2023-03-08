@@ -1,9 +1,9 @@
-const AddManager = () => {
+const UpdatePharmacist = () => {
   return (
-    <div className="manager">
-      <div className="updateManager">
+    <div className="pharmacist">
+      <div className="updatePharmacist">
         <div className="main__form">
-          <div className="main__form--title text-center">Update Manager</div>
+          <div className="main__form--title text-center">Update Pharmacist</div>
           <form action="#" method="POST">
             <div className="form-row">
               <div className="col col-12">
@@ -13,7 +13,7 @@ const AddManager = () => {
                     type="text"
                     name="fname"
                     placeholder="First name"
-                    defaultValue="MD Arif"
+                    defaultValue="Arif"
                     required=""
                   />
                 </label>
@@ -54,7 +54,11 @@ const AddManager = () => {
                   />
                 </label>
               </div>
-              <input type="hidden" name="action" defaultValue="updateManager" />
+              <input
+                type="hidden"
+                name="action"
+                defaultValue="updatePharmacist"
+              />
               <input type="hidden" name="id" defaultValue={1} />
               <div className="col col-12">
                 <input type="submit" defaultValue="Update" />
@@ -67,4 +71,4 @@ const AddManager = () => {
   );
 };
 
-export default AddManager;
+export default UpdatePharmacist;
