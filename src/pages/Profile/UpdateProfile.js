@@ -17,6 +17,7 @@ const UpdateProfile = () => {
     }
     input.focus();
   }
+
   return (
     <div className="userProfileEdit">
       <div className="main__form">

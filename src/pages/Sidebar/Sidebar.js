@@ -1,7 +1,11 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 
-const Sidebar = () => {
+const Sidebar = ({ changeTitleText }) => {
+  const handleTitleText = (text) => {
+    changeTitleText(text);
+  };
+
   return (
     <div id="sideber" className="sideber">
       <ul className="sideber__ber">
@@ -14,39 +18,57 @@ const Sidebar = () => {
         </li>
         {/* Only For Admin */}
         <li id="left" className="sideber__item sideber__item--modify active">
-          <NavLink to="/managers/add">
+          <NavLink
+            to="/managers/add"
+            onClick={() => handleTitleText("Add Manager")}
+          >
             <i id="left" className="fas fa-user-plus" />
             Add Manager
           </NavLink>
         </li>
         <li id="left" className="sideber__item">
-          <NavLink to="/managers">
+          <NavLink
+            to="/managers"
+            onClick={() => handleTitleText("All Managers")}
+          >
             <i id="left" className="fas fa-user" />
             All Manager
           </NavLink>
         </li>
         {/* For Admin, Manager */}
         <li id="left" className="sideber__item sideber__item--modify">
-          <NavLink to="/pharmacists/add">
+          <NavLink
+            to="/pharmacists/add"
+            onClick={() => handleTitleText("Add Pharmacist")}
+          >
             <i id="left" className="fas fa-user-plus" />
             Add Pharmacist
           </NavLink>
         </li>
         <li id="left" className="sideber__item">
-          <NavLink to="/pharmacists">
+          <NavLink
+            to="/pharmacists"
+            onClick={() => handleTitleText("All Pharmacists")}
+          >
             <i id="left" className="fas fa-user" />
             All Pharmacist
           </NavLink>
         </li>
         {/* For Admin, Manager, Pharmacist*/}
         <li id="left" className="sideber__item sideber__item--modify">
-          <NavLink to="/salesmen/add">
+          <NavLink
+            to="/salesmen/add"
+            onClick={() => handleTitleText("Add Salesman")}
+          >
             <i id="left" className="fas fa-user-plus" />
             Add Salesman
           </NavLink>
         </li>
         <li id="left" className="sideber__item">
-          <NavLink to="/salesmen">
+          <NavLink
+            to="/salesmen"
+            onClick={() => handleTitleText("All Salesman")}
+          >
             <i id="left" className="fas fa-user" />
             All Salesman
           </NavLink>

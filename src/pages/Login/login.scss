@@ -4,23 +4,68 @@
   background: rgb(63, 94, 251);
   background: radial-gradient(
     circle,
-    rgb(59, 87, 226) 0%,
-    rgb(197, 54, 82) 100%
+    rgb(39, 67, 207) 0%,
+    rgb(207, 37, 71) 100%
   );
+
+  .icons {
+    button {
+      margin: 5px 10px;
+
+      i {
+        font-size: 18px;
+      }
+
+      &.google {
+        background-color: #ea4335;
+        color: #fff;
+        &:hover {
+          background-color: #fff;
+          color: #ea4335;
+        }
+      }
+
+      &.github {
+        background-color: #333;
+        color: #fff;
+        &:hover {
+          background-color: #fff;
+          color: #333;
+        }
+      }
+
+      &.facebook {
+        background-color: #1877f2;
+        color: #fff;
+        &:hover {
+          background-color: #fff;
+          color: #1877f2;
+        }
+      }
+    }
+  }
 
   &__form {
     position: absolute;
-    width: 600px;
+    width: 700px;
     padding: 5rem 3rem;
     box-shadow: 0 0.25rem 2.75rem 0 rgba(255, 255, 255, 1);
     top: 50%;
+    border-radius: 20px;
     transform: translate(-50%, -50%);
     left: 50%;
+
     &--title {
-      font-size: 30px;
-      font-weight: bold;
+      font-size: 36px;
+      font-weight: 600;
       padding: 10px 0;
       color: #fff;
+
+      &--semi {
+        margin: 15px;
+        font-size: 26px;
+        color: #fff;
+      }
     }
 
     .input {

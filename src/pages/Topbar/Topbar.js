@@ -2,11 +2,11 @@ import React from "react";
 import { Link } from "react-router-dom";
 import avatar from "../../assets/img/avatar.png";
 
-const Topbar = () => {
+const Topbar = ({ pageTitle }) => {
   return (
     <div className="topber">
       <div className="topber__title">
-        <span className="topber__title--text">DashBoard</span>
+        <span className="topber__title--text">{pageTitle || "Dashboard"}</span>
       </div>
       <div className="topber__profile">
         <img

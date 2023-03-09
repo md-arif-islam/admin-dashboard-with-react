@@ -1,4 +1,10 @@
+import avatar from "../../assets/img/avatar.png";
+
 const AddManager = () => {
+  function handleImageClick() {
+    document.getElementById("pimgi").click();
+  }
+
   return (
     <div className="manager">
       <div className="updateManager">
@@ -6,6 +12,28 @@ const AddManager = () => {
           <div className="main__form--title text-center">Update Manager</div>
           <form action="#" method="POST">
             <div className="form-row">
+              <div className="col col-12 text-center pb-3">
+                <img
+                  id="pimg"
+                  src={avatar}
+                  className="img-fluid rounded-circle"
+                  onClick={handleImageClick}
+                  alt=""
+                />
+                <i className="fas fa-pen pimgedit" />
+                <input
+                  onchange="document.getElementById('pimg').src = window.URL.createObjectURL(this.files[0])"
+                  id="pimgi"
+                  style={{ display: "none" }}
+                  type="file"
+                  name="avatar"
+                />
+              </div>
+              <div className="col col-12">
+                <p style={{ color: "red" }} className="text-center">
+                  Please make sure this file is jpg, png or jpeg
+                </p>
+              </div>
               <div className="col col-12">
                 <label className="input">
                   <i id="left" className="fas fa-user-circle" />
